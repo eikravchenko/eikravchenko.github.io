@@ -245,3 +245,34 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;op
 @media(max-width:560px){
  .avatar-system-v51{width:92vw;height:620px}
 }
+
+/* V5.2.2 — avatar placement only: keep the approved artwork, show the complete figure. */
+@media(min-width:851px){
+  .hero-inner{grid-template-columns:minmax(0,1.08fr) minmax(400px,.92fr);gap:24px;align-items:center}
+  .avatar-system-v51{
+    width:min(430px,34vw);
+    height:700px;
+    justify-self:end;
+    align-self:center;
+    transform:translate(0,34px);
+    overflow:visible;
+  }
+  .avatar-system-v51 .avatar-core-v52{
+    inset:0;
+    align-items:center;
+    justify-content:center;
+    overflow:visible;
+  }
+  .avatar-system-v51 .avatar-core-v52 img{
+    width:auto;
+    height:700px;
+    max-width:none;
+    object-fit:contain;
+  }
+  .avatar-system-v51 .avatar-halo{inset:7% 2%;}
+  .hero-network{left:63%;top:54%;width:min(700px,52vw);height:min(560px,42vw);}
+}
+@media(min-width:851px) and (max-height:820px){
+  .avatar-system-v51{height:650px;transform:translate(0,28px)}
+  .avatar-system-v51 .avatar-core-v52 img{height:650px}
+}

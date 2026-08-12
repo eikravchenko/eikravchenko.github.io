@@ -17,3 +17,7 @@ This version intentionally favors the original avatar's character over decorativ
 
 ## V5.2.1
 Placement-only correction. The approved V5.2 character is unchanged; the hero now uses the full-body avatar asset with contain framing, keeping the portrait entirely visible and positioned to the right of the text.
+
+
+## V5.2.2
+Placement-only correction: the approved avatar artwork is rendered at a fixed height so the complete figure remains visible on the desktop hero. No redesign of the character or left-side content.
