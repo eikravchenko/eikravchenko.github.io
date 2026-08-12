@@ -1,16 +1,19 @@
-# kravchenko.moscow — V5.2
+# kravchenko.moscow — V5.1
 
-Next site iteration based on the real-domain QA screenshots.
+First-screen correction based on real-domain screenshot QA.
 
 Changes:
-- keeps the V5.1 structure and all pages;
-- uses the approved newer character design as the hero visual;
-- keeps the character with smaller, more natural eyes and neater hair/beard;
-- treats the generated character scene as a blended visual layer so the dark background integrates with the site;
-- moves the character farther right to protect the name/text area;
-- makes BUSINESS / PRODUCT / PEOPLE / TECHNOLOGY slightly clearer while keeping them subordinate;
-- reduces the floor grid and overall decorative intensity;
-- removes the caption under the character to reduce clutter;
-- preserves light/dark theme, navigation, project pages and responsive behavior.
+- avatar enlarged substantially and restored as the visual hero;
+- removed artificial glow from the portrait;
+- network is now a subtle supporting layer around the avatar;
+- corrected node placement so BUSINESS / PRODUCT / PEOPLE / TECHNOLOGY no longer collide with the page header;
+- reduced floor-grid intensity;
+- tightened the hero statement for better balance;
+- reduced parallax amplitude;
+- preserved the existing content, pages, theme toggle and case studies.
 
-Upload the contents of this archive to the domain root and replace the previous version.
+This version intentionally favors the original avatar's character over decorative effects.
+
+
+## V5.2.1
+Placement-only correction. The approved V5.2 character is unchanged; the hero now uses the full-body avatar asset with contain framing, keeping the portrait entirely visible and positioned to the right of the text.

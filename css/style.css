@@ -201,3 +201,47 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;op
 @media(max-width:1000px){.hero-inner{grid-template-columns:1fr .9fr}.avatar-system-v51{width:min(560px,46vw)}}
 @media(max-width:850px){.hero-inner{grid-template-columns:1fr;gap:0}.avatar-system-v51{width:min(560px,88vw);order:-1;justify-self:center;margin:-5px auto 0;transform:none}.hero-copy{padding-bottom:0}.hero-network{left:50%;top:29%;width:94vw;height:80vw;opacity:.5}.hero h1{font-size:clamp(58px,15vw,100px)}.metric-strip{margin-top:42px}}
 @media(max-width:560px){.avatar-system-v51{width:94vw}.hero h1{font-size:16vw}.hero-statement{font-size:21px}.hero-network{opacity:.38}.hero{padding-top:95px}}
+
+
+/* V5.2.1 — placement-only correction: keep the approved avatar, restore its full-body framing. */
+.avatar-system-v51{
+  width:min(520px,39vw);
+  height:min(760px,84vh);
+  aspect-ratio:auto;
+  justify-self:end;
+  align-self:center;
+  transform:translate(-1%,0);
+  z-index:4;
+}
+.avatar-system-v51 .avatar-core-v52{
+  position:absolute;
+  inset:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:visible;
+  filter:drop-shadow(0 28px 42px rgba(0,0,0,.22));
+}
+.avatar-system-v51 .avatar-core-v52 img{
+  display:block;
+  width:auto;
+  height:100%;
+  max-width:none;
+  object-fit:contain;
+  mix-blend-mode:normal;
+  filter:none;
+  mask-image:none;
+  -webkit-mask-image:none;
+}
+.avatar-system-v51 .avatar-halo{inset:7% 4%;}
+.hero-network{left:60%;top:51%;}
+@media(max-width:1100px){
+ .avatar-system-v51{width:min(470px,40vw);height:min(690px,80vh)}
+}
+@media(max-width:850px){
+ .avatar-system-v51{width:min(430px,82vw);height:min(650px,78vh);order:-1;justify-self:center;margin:0 auto;transform:none}
+ .avatar-system-v51 .avatar-core-v52 img{height:100%;width:auto}
+}
+@media(max-width:560px){
+ .avatar-system-v51{width:92vw;height:620px}
+}
