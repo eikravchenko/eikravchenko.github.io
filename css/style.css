@@ -179,3 +179,25 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;op
  .network-node span{display:none}
  .hero-statement{font-size:22px}
 }
+
+
+/* V5.2 — approved character / cleaner hero composition */
+.hero{background:#071321}
+.hero .grid{opacity:.16}
+.hero-inner{grid-template-columns:minmax(0,1fr) minmax(480px,.92fr);gap:10px;align-items:center}
+.hero-copy{max-width:760px;padding-bottom:18px}
+.hero h1{font-size:clamp(62px,8.7vw,124px);letter-spacing:-.072em;line-height:.84;margin-top:20px}
+.hero-statement{max-width:700px;font-size:clamp(20px,2.3vw,30px);line-height:1.1}
+.metric-strip{margin-top:58px}
+.avatar-system-v51{width:min(620px,47vw);justify-self:end;transform:translate(1%,0)}
+.avatar-system-v51 .avatar-core-v52{left:0;right:0;top:-5%;bottom:-6%;filter:none;overflow:visible}
+.avatar-system-v51 .avatar-core-v52 img{width:100%;height:auto;display:block;mix-blend-mode:screen;filter:none;mask-image:radial-gradient(ellipse 72% 72% at 50% 50%,#000 57%,rgba(0,0,0,.96) 68%,transparent 91%);-webkit-mask-image:radial-gradient(ellipse 72% 72% at 50% 50%,#000 57%,rgba(0,0,0,.96) 68%,transparent 91%)}
+.avatar-system-v51 .avatar-halo{inset:18%;background:radial-gradient(circle,rgba(54,119,184,.18),rgba(54,119,184,.06) 38%,transparent 69%);filter:blur(8px)}
+.avatar-system-v51 .avatar-caption{display:none}
+.hero-network{left:61%;top:51%;width:min(760px,58vw);height:min(590px,45vw);opacity:.62}
+.network-node{font-size:9px}.network-node b{font-size:10px}.network-node span{font-size:8px}
+.node-business{left:8%;top:17%}.node-product{right:2%;top:30%}.node-people{left:9%;bottom:17%}.node-tech{right:1%;bottom:19%}
+.network-line{opacity:.7}.network-arc{opacity:.75}
+@media(max-width:1000px){.hero-inner{grid-template-columns:1fr .9fr}.avatar-system-v51{width:min(560px,46vw)}}
+@media(max-width:850px){.hero-inner{grid-template-columns:1fr;gap:0}.avatar-system-v51{width:min(560px,88vw);order:-1;justify-self:center;margin:-5px auto 0;transform:none}.hero-copy{padding-bottom:0}.hero-network{left:50%;top:29%;width:94vw;height:80vw;opacity:.5}.hero h1{font-size:clamp(58px,15vw,100px)}.metric-strip{margin-top:42px}}
+@media(max-width:560px){.avatar-system-v51{width:94vw}.hero h1{font-size:16vw}.hero-statement{font-size:21px}.hero-network{opacity:.38}.hero{padding-top:95px}}
