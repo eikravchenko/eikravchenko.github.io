@@ -1,17 +1,13 @@
-# kravchenko.moscow — V3
+# kravchenko.moscow — V4
 
-V3 — усиление личного бренда и кейсов.
+Premium visual polish:
+- editorial typography and spacing;
+- refined portrait presentation;
+- subtle film-grain texture;
+- cursor light on desktop;
+- page transition animation;
+- magnetic contact/CTA interactions;
+- richer hover states and navigation underlines;
+- all V3 case-study content preserved.
 
-Ключевая формула:
-«Я создаю системы, в которых сложные проекты становятся управляемыми: превращаю сложность в понятные продукты, соединяя людей, бизнес и технологии.»
-
-Добавлено:
-- более сильное позиционирование на первом экране;
-- доказательство результата: 10×+, 0→1, несколько профессиональных команд;
-- полноценный кейс Единой системы сайтов нотариата;
-- отдельная логика для кейса Нотариат.рф;
-- блок «Как я думаю» вместо стандартного списка навыков;
-- акцент на связке бизнеса и разработки;
-- сохранены тёмная/светлая тема, адаптивность и анимации.
-
-Перед публикацией заменить временные Telegram/email на реальные контакты.
+The design deliberately stays calm and minimal rather than becoming an effects showcase.

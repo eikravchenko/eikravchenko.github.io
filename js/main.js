@@ -16,3 +16,30 @@ if(hero&&avatar&&matchMedia('(pointer:fine)').matches){
   hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;avatar.style.transform=`translate(${x*9}px,${y*7}px)`});
   hero.addEventListener('pointerleave',()=>avatar.style.transform='');
 }
+
+// V4 — restrained premium micro-interactions.
+const cursorLight=document.createElement('div');
+cursorLight.className='cursor-light';
+if(matchMedia('(pointer:fine)').matches) document.body.appendChild(cursorLight);
+window.addEventListener('pointermove',e=>{if(cursorLight){cursorLight.style.left=e.clientX+'px';cursorLight.style.top=e.clientY+'px'}});
+
+document.querySelectorAll('a[href]').forEach(a=>{
+  const href=a.getAttribute('href');
+  if(!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('https://t.me') || a.target==='_blank') return;
+  a.addEventListener('click',e=>{
+    const url=new URL(href,location.href);
+    if(url.origin!==location.origin) return;
+    e.preventDefault();
+    const veil=document.createElement('div'); veil.className='page-transition'; document.body.appendChild(veil);
+    setTimeout(()=>location.href=url.href,520);
+  });
+});
+document.querySelectorAll('.contact,.arrow-link').forEach(el=>el.classList.add('magnetic'));
+document.querySelectorAll('.magnetic').forEach(el=>{
+  if(!matchMedia('(pointer:fine)').matches)return;
+  el.addEventListener('pointermove',e=>{
+    const r=el.getBoundingClientRect();
+    el.style.transform=`translate(${(e.clientX-(r.left+r.width/2))*.08}px,${(e.clientY-(r.top+r.height/2))*.08}px)`;
+  });
+  el.addEventListener('pointerleave',()=>el.style.transform='');
+});
