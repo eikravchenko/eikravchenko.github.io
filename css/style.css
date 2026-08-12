@@ -323,3 +323,19 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;op
   .hero-network{left:50%;top:29%;width:94vw;height:80vw;opacity:.48}
 }
 @media(max-width:560px){.avatar-system-v51{width:92vw;height:min(680px,74vh)}.hero-network{opacity:.34}}
+
+/* V5.2.4 — integrate avatar artwork with the page background */
+.avatar-system-v51 .avatar-core-v52 img{
+  mix-blend-mode:normal;
+  filter:saturate(.88) contrast(1.01);
+}
+.avatar-system-v51 .avatar-halo{
+  inset:12%;
+  background:
+    radial-gradient(circle at 50% 48%,
+      rgba(65,125,188,.16) 0%,
+      rgba(65,125,188,.08) 36%,
+      rgba(65,125,188,.025) 58%,
+      transparent 74%);
+  filter:blur(10px);
+}
