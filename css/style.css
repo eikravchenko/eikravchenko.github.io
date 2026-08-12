@@ -385,3 +385,55 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;op
     transform:translate(-2%,28px);
   }
 }
+
+
+/* V5.3 — first screen without avatar.
+   The avatar is intentionally removed for this iteration; the network becomes the visual anchor.
+   It can be restored in the final iteration without changing the overall composition. */
+.hero{
+  background:
+    radial-gradient(circle at 72% 48%, rgba(31,79,125,.12), transparent 34%),
+    #071321;
+}
+.hero-inner{
+  grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);
+  gap:70px;
+  align-items:center;
+}
+.hero-copy{
+  max-width:820px;
+  padding-right:0;
+}
+.hero-network{
+  left:72%;
+  top:50%;
+  width:min(760px,52vw);
+  height:min(590px,44vw);
+  opacity:.66;
+  z-index:1;
+}
+.hero-copy .metric-strip{
+  max-width:760px;
+}
+.hero-copy .tags{margin-top:36px}
+.hero-bottom{bottom:24px}
+@media(max-width:1000px){
+  .hero-inner{grid-template-columns:1fr .72fr;gap:35px}
+  .hero-network{left:70%;width:55vw;height:45vw}
+}
+@media(max-width:850px){
+  .hero-inner{grid-template-columns:1fr;gap:0}
+  .hero-copy{max-width:760px}
+  .hero-network{
+    left:72%;
+    top:43%;
+    width:76vw;
+    height:65vw;
+    opacity:.28;
+  }
+}
+@media(max-width:560px){
+  .hero-network{left:50%;top:31%;width:100vw;height:85vw;opacity:.22}
+  .hero-copy{position:relative;z-index:5}
+  .hero-statement{font-size:21px}
+}

@@ -12,3 +12,7 @@
 
 ## V5.2.5
 Avatar artwork integrated with the page background; network labels repositioned for clearer hierarchy.
+
+
+## V5.3
+Аватар временно убран с главной страницы. Визуальным якорем первого экрана оставлена сетевая графика. Файлы аватара сохранены для финальной итерации.

@@ -11,12 +11,6 @@ document.querySelectorAll('[data-close-menu]').forEach(a=>a.addEventListener('cl
 const io=new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('visible')),{threshold:.12});
 document.querySelectorAll('.reveal').forEach(e=>io.observe(e));
 
-const hero=document.querySelector('.hero'), avatar=document.querySelector('.avatar');
-if(hero&&avatar&&matchMedia('(pointer:fine)').matches){
-  hero.addEventListener('pointermove',e=>{const r=hero.getBoundingClientRect();const x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;avatar.style.transform=`translate(${x*9}px,${y*7}px)`});
-  hero.addEventListener('pointerleave',()=>avatar.style.transform='');
-}
-
 // V4 — restrained premium micro-interactions.
 const cursorLight=document.createElement('div');
 cursorLight.className='cursor-light';
@@ -44,40 +38,3 @@ document.querySelectorAll('.magnetic').forEach(el=>{
   el.addEventListener('pointerleave',()=>el.style.transform='');
 });
 
-// V5 — layered avatar/orbit parallax.
-const avatarSystem=document.querySelector('[data-avatar-system]');
-const avatarDepth=document.querySelector('[data-avatar-depth]');
-const heroOrbits=document.querySelector('.hero-orbits');
-if(avatarSystem && matchMedia('(pointer:fine)').matches){
-  avatarSystem.addEventListener('pointermove',e=>{
-    const r=avatarSystem.getBoundingClientRect();
-    const x=(e.clientX-(r.left+r.width/2))/r.width;
-    const y=(e.clientY-(r.top+r.height/2))/r.height;
-    avatarSystem.style.transform=`translate(${x*10}px,${y*7}px)`;
-    avatarDepth.style.transform=`translate(${x*14}px,${y*10}px)`;
-    heroOrbits.style.transform=`translate(calc(-50% + ${x*-12}px),calc(-50% + ${y*-8}px))`;
-  });
-  avatarSystem.addEventListener('pointerleave',()=>{
-    avatarSystem.style.transform='';
-    avatarDepth.style.transform='';
-    heroOrbits.style.transform='';
-  });
-}
-
-// V5.1 — subtler first-screen parallax.
-const network51=document.querySelector('.hero-network');
-if(avatarSystem && matchMedia('(pointer:fine)').matches){
-  avatarSystem.addEventListener('pointermove',e=>{
-    const r=avatarSystem.getBoundingClientRect();
-    const x=(e.clientX-(r.left+r.width/2))/r.width;
-    const y=(e.clientY-(r.top+r.height/2))/r.height;
-    avatarSystem.style.transform=`translate(${x*5}px,${y*4}px)`;
-    avatarDepth.style.transform=`translate(${x*7}px,${y*5}px)`;
-    if(network51) network51.style.transform=`translate(calc(-50% + ${x*-5}px),calc(-50% + ${y*-3}px))`;
-  });
-  avatarSystem.addEventListener('pointerleave',()=>{
-    avatarSystem.style.transform='';
-    avatarDepth.style.transform='';
-    if(network51) network51.style.transform='';
-  });
-}
