@@ -36,3 +36,50 @@ a{color:inherit;text-decoration:none}button{font:inherit}img{display:block;max-w
 
 @media(max-width:850px){.nav-links{display:none}.menu-btn{display:block}.mobile-menu.open{display:block;position:fixed;inset:0;z-index:40;background:var(--bg);padding:110px 24px 40px}.mobile-menu a{display:block;padding:18px 0;border-bottom:1px solid var(--line);font-size:30px}.hero-inner{grid-template-columns:1fr}.avatar{order:-1;width:250px}.orbit{left:50%}.pulse{left:50%}.hero-bottom{display:none}.principles{grid-template-columns:1fr 1fr}.principle{border-bottom:1px solid var(--line)}.connection{height:520px}.section{padding:105px 0}}
 @media(max-width:560px){.container,.hero-inner{width:calc(100% - 32px)}.hero h1{font-size:17vw}.principles{grid-template-columns:1fr}.principle{border-right:0}.project{grid-template-columns:40px 1fr auto}.project h3{font-size:30px}.center{width:122px;height:122px}.connection-label{font-size:8px}.footer{flex-direction:column;gap:8px}}
+
+/* V3 — personal brand / case-study layer */
+.hero-kicker{display:inline-flex;align-items:center;gap:10px;color:var(--muted);font-size:10px;letter-spacing:.16em;text-transform:uppercase}
+.hero-kicker i{display:block;width:34px;height:1px;background:var(--accent)}
+.hero-statement{max-width:760px;margin-top:30px;font-size:clamp(22px,3vw,38px);line-height:1.08;letter-spacing:-.035em}
+.hero-statement em{font-style:normal;color:var(--accent)}
+.metric-strip{display:grid;grid-template-columns:repeat(3,1fr);margin-top:70px;border-top:1px solid var(--line)}
+.metric{padding:22px 18px 0 0;border-right:1px solid var(--line)}
+.metric:last-child{border-right:0;padding-left:18px}
+.metric b{display:block;font-size:clamp(30px,4vw,52px);letter-spacing:-.05em;font-weight:500}
+.metric span{display:block;margin-top:5px;color:var(--muted);font-size:10px;letter-spacing:.12em;text-transform:uppercase}
+.case-hero{display:grid;grid-template-columns:1.2fr .8fr;gap:60px;align-items:end;margin-top:60px}
+.case-label{color:var(--accent);font-size:10px;letter-spacing:.16em;text-transform:uppercase}
+.case-title{font-size:clamp(40px,6vw,82px);line-height:.92;letter-spacing:-.065em;margin:13px 0}
+.case-intro{color:var(--muted);font-size:19px;max-width:720px}
+.case-meta{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.case-meta div{padding:18px 14px 18px 0;border-right:1px solid var(--line)}
+.case-meta div:nth-child(even){padding-left:14px;border-right:0}
+.case-meta small{display:block;color:var(--muted);font-size:9px;letter-spacing:.13em;text-transform:uppercase;margin-bottom:6px}
+.case-meta strong{font-size:14px;font-weight:500}
+.case-section{padding:85px 0;border-top:1px solid var(--line)}
+.case-section h2{font-size:clamp(32px,4vw,55px);line-height:1;letter-spacing:-.05em;margin:0 0 24px}
+.case-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.case-grid p{color:var(--muted);font-size:17px;margin:0 0 18px}
+.role-cloud{display:flex;flex-wrap:wrap;gap:8px;margin-top:30px}
+.role-cloud span{border:1px solid var(--line);padding:9px 12px;border-radius:999px;font-size:10px;letter-spacing:.11em;color:var(--muted)}
+.case-result{font-size:clamp(45px,7vw,92px);line-height:.9;letter-spacing:-.065em;margin:0}
+.case-result span{color:var(--accent)}
+.quote{border-left:1px solid var(--accent);padding-left:25px;font-size:clamp(24px,3vw,40px);line-height:1.08;letter-spacing:-.035em}
+.thinking{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);margin-top:50px}
+.thinking-item{background:var(--bg);padding:34px;min-height:220px;transition:.25s}
+.thinking-item:hover{background:var(--soft)}
+.thinking-item b{font-size:12px;color:var(--accent);letter-spacing:.12em}
+.thinking-item h3{font-size:27px;margin:34px 0 10px}
+.thinking-item p{color:var(--muted);font-size:14px;max-width:430px}
+.brand-close{padding:110px 0 150px}
+.brand-close .quote{max-width:900px}
+@media(max-width:850px){
+ .hero-statement{font-size:25px}.metric-strip{margin-top:45px}
+ .case-hero,.case-grid{grid-template-columns:1fr;gap:35px}
+ .thinking{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+ .metric-strip{grid-template-columns:1fr}.metric,.metric:last-child{border-right:0;border-bottom:1px solid var(--line);padding:17px 0}.metric:last-child{border-bottom:0}
+ .case-meta{grid-template-columns:1fr}.case-meta div,.case-meta div:nth-child(even){border-right:0;border-bottom:1px solid var(--line);padding:14px 0}
+ .case-meta div:last-child{border-bottom:0}
+}
