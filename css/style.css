@@ -339,3 +339,49 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;op
       transparent 74%);
   filter:blur(10px);
 }
+
+/* V5.2.5 — final visual integration of the approved avatar */
+.hero{background:#071321}
+.hero-network{z-index:3;opacity:.52}
+.avatar-system-v51{z-index:4}
+
+/* The artwork already contains a controlled navy vignette; don't mask or blend it. */
+.avatar-system-v51 .avatar-core-v52 img{
+  width:auto;
+  height:100%;
+  max-width:none;
+  object-fit:contain;
+  mix-blend-mode:normal;
+  filter:saturate(.92) contrast(1.01);
+  mask-image:none !important;
+  -webkit-mask-image:none !important;
+}
+
+/* Keep the four concepts readable without competing with the name or the person. */
+.node-business{left:2%;top:13%}
+.node-product{right:-2%;top:22%}
+.node-people{left:3%;bottom:18%}
+.node-tech{right:-2%;bottom:16%}
+
+.avatar-system-v51 .avatar-halo{
+  inset:4%;
+  background:
+    radial-gradient(ellipse at 50% 47%,
+      rgba(45,111,180,.13) 0%,
+      rgba(45,111,180,.065) 34%,
+      rgba(45,111,180,.02) 57%,
+      transparent 76%);
+  filter:blur(12px);
+}
+
+@media(min-width:851px){
+  .hero-inner{
+    grid-template-columns:minmax(0,1.06fr) minmax(430px,.94fr);
+    gap:18px;
+  }
+  .avatar-system-v51{
+    width:min(430px,34vw);
+    height:min(700px,82vh);
+    transform:translate(-2%,28px);
+  }
+}

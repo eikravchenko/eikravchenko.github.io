@@ -8,3 +8,7 @@
 - BUSINESS / PRODUCT / PEOPLE / TECHNOLOGY переразложены вокруг аватара;
 - орбитальная система стала единым слоем вокруг персонажа;
 - левая часть первого экрана не изменялась.
+
+
+## V5.2.5
+Avatar artwork integrated with the page background; network labels repositioned for clearer hierarchy.
