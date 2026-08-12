@@ -43,3 +43,23 @@ document.querySelectorAll('.magnetic').forEach(el=>{
   });
   el.addEventListener('pointerleave',()=>el.style.transform='');
 });
+
+// V5 — layered avatar/orbit parallax.
+const avatarSystem=document.querySelector('[data-avatar-system]');
+const avatarDepth=document.querySelector('[data-avatar-depth]');
+const heroOrbits=document.querySelector('.hero-orbits');
+if(avatarSystem && matchMedia('(pointer:fine)').matches){
+  avatarSystem.addEventListener('pointermove',e=>{
+    const r=avatarSystem.getBoundingClientRect();
+    const x=(e.clientX-(r.left+r.width/2))/r.width;
+    const y=(e.clientY-(r.top+r.height/2))/r.height;
+    avatarSystem.style.transform=`translate(${x*10}px,${y*7}px)`;
+    avatarDepth.style.transform=`translate(${x*14}px,${y*10}px)`;
+    heroOrbits.style.transform=`translate(calc(-50% + ${x*-12}px),calc(-50% + ${y*-8}px))`;
+  });
+  avatarSystem.addEventListener('pointerleave',()=>{
+    avatarSystem.style.transform='';
+    avatarDepth.style.transform='';
+    heroOrbits.style.transform='';
+  });
+}

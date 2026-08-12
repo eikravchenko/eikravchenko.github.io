@@ -1,13 +1,13 @@
-# kravchenko.moscow — V4
+# kravchenko.moscow — V5
 
-Premium visual polish:
-- editorial typography and spacing;
-- refined portrait presentation;
-- subtle film-grain texture;
-- cursor light on desktop;
-- page transition animation;
-- magnetic contact/CTA interactions;
-- richer hover states and navigation underlines;
-- all V3 case-study content preserved.
+V5 makes the avatar a structural part of the hero rather than a standalone image.
 
-The design deliberately stays calm and minimal rather than becoming an effects showcase.
+Avatar concept:
+- supplied avatar is used as the source;
+- near-white background is removed into transparency;
+- portrait sits inside an orbital/network system;
+- four nodes represent BUSINESS / PRODUCT / PEOPLE / TECHNOLOGY;
+- layered mouse parallax gives the portrait and system different depth;
+- mobile layout simplifies the composition.
+
+The rest of V4 remains intact.
