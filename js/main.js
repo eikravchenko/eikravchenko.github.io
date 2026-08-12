@@ -63,3 +63,21 @@ if(avatarSystem && matchMedia('(pointer:fine)').matches){
     heroOrbits.style.transform='';
   });
 }
+
+// V5.1 — subtler first-screen parallax.
+const network51=document.querySelector('.hero-network');
+if(avatarSystem && matchMedia('(pointer:fine)').matches){
+  avatarSystem.addEventListener('pointermove',e=>{
+    const r=avatarSystem.getBoundingClientRect();
+    const x=(e.clientX-(r.left+r.width/2))/r.width;
+    const y=(e.clientY-(r.top+r.height/2))/r.height;
+    avatarSystem.style.transform=`translate(${x*5}px,${y*4}px)`;
+    avatarDepth.style.transform=`translate(${x*7}px,${y*5}px)`;
+    if(network51) network51.style.transform=`translate(calc(-50% + ${x*-5}px),calc(-50% + ${y*-3}px))`;
+  });
+  avatarSystem.addEventListener('pointerleave',()=>{
+    avatarSystem.style.transform='';
+    avatarDepth.style.transform='';
+    if(network51) network51.style.transform='';
+  });
+}
