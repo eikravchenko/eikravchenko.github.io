@@ -437,3 +437,17 @@ body:after{content:"";position:fixed;inset:0;pointer-events:none;z-index:9999;op
   .hero-copy{position:relative;z-index:5}
   .hero-statement{font-size:21px}
 }
+
+/* V5.4 — About page: personal brand, clarity and depth */
+.about-hero{padding:175px 0 120px;min-height:78svh;display:flex;align-items:flex-end;background:radial-gradient(circle at 82% 34%,rgba(45,111,180,.10),transparent 34%)}
+.about-hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:80px;align-items:end;margin-top:20px}
+.about-hero h1{font-size:clamp(70px,10vw,142px);line-height:.82;letter-spacing:-.075em;font-weight:600;margin:0}
+.about-intro{padding-bottom:8px;max-width:570px}.about-intro p{font-size:clamp(24px,3vw,39px);line-height:1.08;letter-spacing:-.035em;margin:0;color:var(--text)}
+.about-signature{margin-top:42px;color:var(--muted);font-size:11px;letter-spacing:.12em;text-transform:uppercase}.about-signature span{display:inline-block;margin-top:7px;color:var(--accent);font-size:9px}
+.about-section{padding-top:115px;padding-bottom:115px}.about-grid-3{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.about-card{padding:27px 30px 10px 0;min-height:270px;border-right:1px solid var(--line)}.about-card:not(:first-child){padding-left:30px}.about-card:last-child{border-right:0}.about-card-num{font-size:10px;color:var(--accent);letter-spacing:.12em}.about-card h2{font-size:clamp(34px,4vw,54px);margin:45px 0 12px;letter-spacing:-.05em}.about-card p{font-size:14px;line-height:1.6;color:var(--muted);max-width:310px}
+.about-two-col{display:grid;grid-template-columns:.95fr 1.05fr;gap:100px}.about-two-col h2{font-size:clamp(48px,6vw,82px);line-height:.91;letter-spacing:-.065em;margin:15px 0 0}.about-body{max-width:690px;padding-top:5px}.about-body p{font-size:18px;line-height:1.65;color:var(--muted);margin:0 0 23px}.about-body strong{color:var(--text);font-weight:500}
+.about-quote{font-size:clamp(42px,5.6vw,76px);line-height:.98;letter-spacing:-.06em;max-width:900px;margin:70px 0 90px;color:var(--text)}
+.about-principles{border-top:1px solid var(--line)}.about-principle{display:grid;grid-template-columns:70px 1fr;gap:25px;padding:27px 0;border-bottom:1px solid var(--line)}.about-principle>span{font-size:10px;color:var(--accent);padding-top:6px}.about-principle h3{font-size:clamp(22px,2.4vw,32px);font-weight:500;letter-spacing:-.025em;margin:0 0 8px}.about-principle p{font-size:14px;color:var(--muted);margin:0;max-width:680px}.about-final{min-height:70svh;display:flex;align-items:center}.about-final h2{font-size:clamp(58px,8vw,112px);line-height:.88;letter-spacing:-.07em;margin:16px 0 40px}
+@media(max-width:850px){.about-hero{min-height:auto;padding:145px 0 90px}.about-hero-grid,.about-two-col{grid-template-columns:1fr;gap:45px}.about-intro{max-width:680px}.about-grid-3{grid-template-columns:1fr}.about-card,.about-card:not(:first-child){padding:25px 0;border-right:0;border-bottom:1px solid var(--line);min-height:auto}.about-card h2{margin-top:25px}.about-card:last-child{border-bottom:0}.about-section{padding-top:85px;padding-bottom:85px}.about-quote{margin:50px 0 65px}.about-final{min-height:55svh}}
+@media(max-width:560px){.about-hero{padding-top:125px}.about-hero h1{font-size:19vw}.about-intro p{font-size:25px}.about-signature{margin-top:30px}.about-principle{grid-template-columns:45px 1fr;gap:15px}.about-final h2{font-size:17vw}}
